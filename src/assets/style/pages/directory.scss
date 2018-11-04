@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "../global";
+.directory_wrap{
+  width: 100%;
+  >.directory_title{
+    padding: px2rem(40) 0 px2rem(20);
+    text-align: center;
+    font-size: px2rem(36);
+  }
+  >.directory{
+    padding: 0 px2rem(30) px2rem(30);
+    >.directory_item{
+      font-size: px2rem(16);
+      line-height: px2rem(32);
+    }
+  }
+}

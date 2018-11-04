@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import "./reset";
+
+// 1rem = fontSize px
+// 1px = (1 / fontSize)rem
+$fontSize : 37.5;
+@function px2rem($px){
+  @return ($px / $fontSize) + rem;
+}
+
+@mixin center(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.icon{
+  color: #333;
+  font-size: px2rem(20);
+}
+
+.slide_down-enter,.slide_down-leave-to{
+  transform: translate3d(0, -100%, 0)
+}
+.slide_down-enter-to,.slide_down_leave,.slide_up-enter-to,.slide_up_leave{
+  transform: translate3d(0, 0, 0)
+}
+.slide_down-enter-active,.slide_down-leave-active,.slide_up-enter-active,.slide_up-leave-active{
+  transition: all .3s linear;
+}
+.slide_up-enter,.slide_up-leave-to{
+  transform: translate3d(0, px2rem(108), 0)
+}
+
+.fade-enter-to, .fade-leave{
+  opacity: 1;
+  transition: all 1s linear;
+}
+.slide-right-enter, .slide-right-leave-to{
+  transform: translate3d(-100%, 0, 0);
+}
+.slide-right-enter-to, .slide-right-leave{
+  transform: translate3d(0, 0, 0);
+}
+.slide-right-enter-active,.slide-right-leave-active{
+  transition: all 0.3s linear;
+}

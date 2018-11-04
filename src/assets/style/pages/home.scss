@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import "../global";
+
+.ebook_wrap{
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+  >.read_wrapper{
+    >.read_mask{
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 100;
+      background: rgba(0,0,0,0.1);
+      >.read_center{
+        width: 100%;
+        height: 100%;
+      }
+      >.read_left{
+        position: absolute;
+        left: px2rem(10);
+        top: 45%;
+        color: #666;
+        font-size: px2rem(30);
+      }
+      .read_right{
+        position: absolute;
+        right: px2rem(10);
+        top: 45%;
+        color: #666;
+        font-size: px2rem(30);
+      }
+    }
+  }
+}

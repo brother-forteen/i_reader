@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "./../global";
+
+.title_wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: px2rem(48);
+  z-index: 101;
+  display: flex;
+  background: rgba(255,255,255,1);
+  box-shadow: 0 px2rem(5) px2rem(5) rgba(0,0,0,0.15);
+  >.title_wrapper_left{
+    flex: 0 0 px2rem(60);
+    @include center();
+    >.icon-7{
+      font-size: px2rem(24);
+    }
+  }
+  >.title_wrapper_right{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    >.icon_wrapper{
+      flex: 0 0 px2rem(40);
+      @include center();
+      >img{
+        display: block;
+        width: px2rem(24);
+        height: px2rem(24);
+        border-radius: px2rem(12);
+      }
+    }
+  }
+}
